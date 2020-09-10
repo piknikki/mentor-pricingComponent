@@ -3,41 +3,67 @@
     <h1>Our Pricing</h1>
     <br>
     <div class="toggle-container">
-      Annually
-      <span class="plans icon" v-if="planToggle === true" v-on:click="changePlan"><i class="fal fa-toggle-off"></i></span>
-      <span class="plans icon" v-else v-on:click="changePlan" ><i class="fal fa-toggle-on"></i></span>
-      Monthly
+      <span>Monthly</span>
+      <span class="plans icon" v-if="planToggle" @click="planToggle=!planToggle">
+        <i class="fal fa-toggle-off fa-lg false-monthly" data-fa-transform="down-3" ></i>
+      </span>
+      <span class="plans icon" v-else v-on:click="changePlan" >
+        <i class="fal fa-toggle-on fa-lg true-annual" data-fa-transform="down-3"></i>
+      </span>
+      <span>Annually</span>
     </div>
-    <div class="card is-centered">
-        <div class="card-content is-centered">
-          Basic
+    <div class="cards-container columns">
+      <div class="card column">
+          <div class="card-content">
+            Basic
+            <br>
+            <h2 v-if="planToggle === true">$ <span class="amount"> 19.99</span></h2>
+            <h2 v-else class="is-vcentered">$ <span class="amount"> 199.99</span></h2>
+            <hr>
+            500mL therapy
+            <hr>
+            2 Scents Allowed
+            <hr>
+            Share up to 100mL
+            <hr>
+            <button class="button">Learn More</button>
+        </div>
+      </div>
+
+      <div class="card column">
+        <div class="card-content">
+          Professional
           <br>
-          <h2 v-if="planToggle === true">$ 19.99</h2>
-          <h2 v-else class="is-vcentered">$ <span class="amount"> 199.99</span></h2>
+          <h2 v-if="planToggle === true">$ <span class="amount"> 24.99</span></h2>
+          <h2 v-else class="is-vcentered">$ <span class="amount"> 249.99</span></h2>
           <hr>
-          500 GB Storage
+          1000mL therapy
           <hr>
-          2 Users Allowed
+          5 Scents Allowed
           <hr>
-          Send up to 3 GB
+          Share up to 300mL
           <hr>
           <button class="button">Learn More</button>
+        </div>
+      </div>
+
+      <div class="card column">
+        <div class="card-content">
+          Master
+          <br>
+          <h2 v-if="planToggle === true">$ <span class="amount"> 39.99</span></h2>
+          <h2 v-else class="is-vcentered">$ <span class="amount"> 399.99</span></h2>
+          <hr>
+          2000mL therapy
+          <hr>
+          10 Scents Allowed
+          <hr>
+          Share up to 500mL
+          <hr>
+          <button class="button">Learn More</button>
+        </div>
       </div>
     </div>
-
-<!--    Professional-->
-<!--    $24.99 $249.99-->
-<!--    1 TB Storage-->
-<!--    5 Users Allowed-->
-<!--    Send up to 10 GB-->
-<!--    Learn More-->
-
-<!--    Master-->
-<!--    $39.99 $399.99-->
-<!--    2 TB Storage-->
-<!--    10 Users Allowed-->
-<!--    Send up to 20 GB-->
-<!--    Learn More-->
   </div>
 </template>
 
@@ -76,19 +102,23 @@ h1 {
 }
 
 .toggle-container {
-  margin: 5px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.6em;
 }
 
-.plans {
-  margin: 5px;
+.icon {
+  margin: 20px;
+  color: #8085E2;
 }
 
 .card {
-  width: 90%;
+  width: 200px;
   text-align: center;
   font-weight: bold;
   font-size: 1.2em;
   border-radius: 10px;
+  margin: 0 auto;
 }
 
 .amount {
@@ -102,5 +132,8 @@ h1 {
 
 button:active {
   background-color: transparent;
+}
+
+.cards-container {
 }
 </style>

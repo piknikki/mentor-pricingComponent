@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-    <div class="level">
-      <div class="level-left">
-        <img class="logo level-item" alt="Aroma Therapy Logo" src="./assets/aromatherapy.png">
-      </div>
-      <div class="level-right">
-        <p class="aroma">AROMA</p>
-        <p class="therapy">therapy</p>
-      </div>
-    </div>
+<!--    <div class="level">-->
+<!--      <div class="level-left">-->
+<!--        <img class="logo level-item" alt="Aroma Therapy Logo" src="./assets/aromatherapy.png">-->
+<!--      </div>-->
+<!--      <div class="level-right">-->
+<!--        <p class="aroma">AROMA</p>-->
+<!--        <p class="therapy">therapy</p>-->
+<!--      </div>-->
+<!--    </div>-->
+    <img class="logo" alt="Aroma Therapy Logo" src="./assets/aromatherapy.png">
+    <span class="aroma">AROMA</span>
+    <span class="therapy">therapy</span>
     <Pricing />
   </div>
 </template>
