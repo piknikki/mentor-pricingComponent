@@ -68,13 +68,8 @@
 </template>
 
 <script>
-import VueToggles from 'vue-toggles'
-
 export default {
   name: 'Pricing',
-  components: {
-    VueToggles
-  },
   data () {
     return {
       planToggle: false
