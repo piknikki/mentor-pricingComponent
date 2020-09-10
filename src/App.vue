@@ -25,8 +25,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: #D8E0E3;
-  color: #2c3e50;
   margin-top: 60px;
+  //background-color: #F7F7FF;
 }
 
 .logo {
