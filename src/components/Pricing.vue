@@ -1,7 +1,6 @@
 <template>
-  <div id="app">
-    <img class="logo" alt="Aroma Therapy Logo" src="./assets/aromatherapy.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="pricing">
+    <h1>this is the pricing div</h1>
   </div>
 </template>
 
@@ -12,12 +11,12 @@ export default {
 </script>
 
 <style>
-#app {
+#pricing {
   font-family: 'IBM Plex Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-image: url("./src/assets/bg-top.svg");
+  background-image: url("../assets/bg-top.svg");
   margin-top: 60px;
 }
 </style>

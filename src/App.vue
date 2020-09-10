@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/aromatherapy.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img class="logo" alt="Aroma Therapy Logo" src="./assets/aromatherapy.png">
+    <span class="aroma">AROMA</span>
+    <span class="therapy">therapy</span>
+    <Pricing />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Pricing from '@/components/Pricing'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Pricing
   }
 }
 </script>
@@ -22,7 +24,25 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-color: #D8E0E3;
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.logo {
+  width: 50px;
+}
+
+.aroma {
+  color: white;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold;
+  margin: 0 5px;
+  letter-spacing: 2px;
+}
+
+.therapy {
+  color: #EAA466;
+}
+
 </style>
