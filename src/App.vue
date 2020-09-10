@@ -1,17 +1,14 @@
 <template>
   <div id="app">
-<!--    <div class="level">-->
-<!--      <div class="level-left">-->
-<!--        <img class="logo level-item" alt="Aroma Therapy Logo" src="./assets/aromatherapy.png">-->
-<!--      </div>-->
-<!--      <div class="level-right">-->
-<!--        <p class="aroma">AROMA</p>-->
-<!--        <p class="therapy">therapy</p>-->
-<!--      </div>-->
-<!--    </div>-->
-    <img class="logo" alt="Aroma Therapy Logo" src="./assets/aromatherapy.png">
-    <span class="aroma">AROMA</span>
-    <span class="therapy">therapy</span>
+    <div class="columns">
+      <div class="column">
+        <img id="logo" class="is-half" alt="Aroma Therapy Logo" src="./assets/aromatherapy.png">
+      </div>
+      <div id="name-block" class="column ">
+        <div class="aroma has-text-centered">AROMA</div>
+        <div class="therapy has-text-centered">therapy</div>
+      </div>
+    </div>
     <Pricing />
   </div>
 </template>
@@ -38,15 +35,14 @@ export default {
   //background-color: #F7F7FF;
 }
 
-.logo {
-  width: 50px;
+#logo {
+  width: 75px;
 }
 
 .aroma {
   color: white;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1.8em;
-  margin: 0 5px;
   letter-spacing: 2px;
 }
 

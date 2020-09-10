@@ -13,7 +13,7 @@
       <span>Annually</span>
     </div>
     <div class="cards-container columns">
-      <div class="card column">
+      <div class="card column is-3 is-half-mobile is-one-third-tablet">
           <div class="card-content">
             Basic
             <br>
@@ -30,7 +30,7 @@
         </div>
       </div>
 
-      <div class="card column">
+      <div class="card column middle-plan is-3 is-half-mobile is-one-third-tablet">
         <div class="card-content">
           Professional
           <br>
@@ -47,7 +47,7 @@
         </div>
       </div>
 
-      <div class="card column">
+      <div class="card column is-3 is-half-mobile is-one-third-tablet">
         <div class="card-content">
           Master
           <br>
@@ -93,7 +93,7 @@ export default {
   background-color: #F7F7FF;
   margin: 30px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 50px 40px;
 }
 
 h1 {
@@ -105,6 +105,7 @@ h1 {
   margin: auto;
   text-align: center;
   font-size: 1.6em;
+  padding: 30px;
 }
 
 .icon {
@@ -118,7 +119,15 @@ h1 {
   font-weight: bold;
   font-size: 1.2em;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 10px auto;
+}
+
+.middle-plan {
+  background-color: #8085E2;
+}
+
+.card:hover {
+  background-color: #8085E2;
 }
 
 .amount {
@@ -128,6 +137,7 @@ h1 {
 
 .button {
   background-color: #EAA466;
+  width: 70%;
 }
 
 button:active {
@@ -135,5 +145,10 @@ button:active {
 }
 
 .cards-container {
+  padding: 0 40px;
+}
+
+.card-content {
+  padding: 2px 2px;
 }
 </style>
