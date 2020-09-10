@@ -7,18 +7,18 @@
       <span class="plans icon" v-if="planToggle" @click="planToggle=!planToggle">
         <i class="fal fa-toggle-off fa-lg false-monthly" data-fa-transform="down-3" ></i>
       </span>
-      <span class="plans icon" v-else v-on:click="changePlan" >
+      <span class="plans icon" v-else @click="planToggle=!planToggle" >
         <i class="fal fa-toggle-on fa-lg true-annual" data-fa-transform="down-3"></i>
       </span>
       <span>Annually</span>
     </div>
     <div class="cards-container columns">
-      <div class="card column is-3 is-half-mobile is-one-third-tablet">
+      <div class="card column is-3 is-desktop">
           <div class="card-content">
             Basic
             <br>
             <h2 v-if="planToggle === true">$ <span class="amount"> 19.99</span></h2>
-            <h2 v-else class="is-vcentered">$ <span class="amount"> 199.99</span></h2>
+            <h2 v-else >$ <span class="amount"> 199.99</span></h2>
             <hr>
             500mL therapy
             <hr>
@@ -30,12 +30,12 @@
         </div>
       </div>
 
-      <div class="card column middle-plan is-3 is-half-mobile is-one-third-tablet">
+      <div class="card column middle-plan is-3 is-desktop">
         <div class="card-content">
           Professional
           <br>
           <h2 v-if="planToggle === true">$ <span class="amount"> 24.99</span></h2>
-          <h2 v-else class="is-vcentered">$ <span class="amount"> 249.99</span></h2>
+          <h2 v-else >$ <span class="amount"> 249.99</span></h2>
           <hr>
           1000mL therapy
           <hr>
@@ -47,12 +47,12 @@
         </div>
       </div>
 
-      <div class="card column is-3 is-half-mobile is-one-third-tablet">
+      <div class="card column is-3 is-desktop">
         <div class="card-content">
           Master
           <br>
           <h2 v-if="planToggle === true">$ <span class="amount"> 39.99</span></h2>
-          <h2 v-else class="is-vcentered">$ <span class="amount"> 399.99</span></h2>
+          <h2 v-else >$ <span class="amount"> 399.99</span></h2>
           <hr>
           2000mL therapy
           <hr>
@@ -68,8 +68,13 @@
 </template>
 
 <script>
+import VueToggles from 'vue-toggles'
+
 export default {
   name: 'Pricing',
+  components: {
+    VueToggles
+  },
   data () {
     return {
       planToggle: false
