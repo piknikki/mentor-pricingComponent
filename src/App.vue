@@ -1,8 +1,14 @@
 <template>
   <div id="app">
-    <img class="logo" alt="Aroma Therapy Logo" src="./assets/aromatherapy.png">
-    <span class="aroma">AROMA</span>
-    <span class="therapy">therapy</span>
+    <div class="level">
+      <div class="level-left">
+        <img class="logo level-item" alt="Aroma Therapy Logo" src="./assets/aromatherapy.png">
+      </div>
+      <div class="level-right">
+        <p class="aroma">AROMA</p>
+        <p class="therapy">therapy</p>
+      </div>
+    </div>
     <Pricing />
   </div>
 </template>
@@ -25,7 +31,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: #D8E0E3;
-  margin-top: 60px;
+  padding: 30px 0;
   //background-color: #F7F7FF;
 }
 
@@ -36,7 +42,7 @@ export default {
 .aroma {
   color: white;
   font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: bold;
+  font-size: 1.8em;
   margin: 0 5px;
   letter-spacing: 2px;
 }

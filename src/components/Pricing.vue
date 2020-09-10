@@ -1,18 +1,19 @@
 <template>
   <div id="pricing">
-    <h2>Our Pricing</h2>
-    Annually
-    <span class="plans icon" v-if="planToggle === true" v-on:click="changePlan"><i class="fal fa-toggle-off"></i></span>
-    <span class="plans icon" v-else v-on:click="changePlan" ><i class="fal fa-toggle-on"></i></span>
-    Monthly
-
-    <div class="card">
-      <div>
-        <div class="card-content">
+    <h1>Our Pricing</h1>
+    <br>
+    <div class="toggle-container">
+      Annually
+      <span class="plans icon" v-if="planToggle === true" v-on:click="changePlan"><i class="fal fa-toggle-off"></i></span>
+      <span class="plans icon" v-else v-on:click="changePlan" ><i class="fal fa-toggle-on"></i></span>
+      Monthly
+    </div>
+    <div class="card is-centered">
+        <div class="card-content is-centered">
           Basic
           <br>
           <h2 v-if="planToggle === true">$ 19.99</h2>
-          <h2 v-else>$ 199.99</h2>
+          <h2 v-else class="is-vcentered">$ <span class="amount"> 199.99</span></h2>
           <hr>
           500 GB Storage
           <hr>
@@ -20,8 +21,7 @@
           <hr>
           Send up to 3 GB
           <hr>
-          <button>Learn More</button>
-      </div>
+          <button class="button">Learn More</button>
       </div>
     </div>
 
@@ -65,7 +65,18 @@ export default {
   text-align: center;
   //background-image: url("../assets/bg-top.svg");
   background-color: #F7F7FF;
-  margin-top: 60px;
+  margin: 30px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.toggle-container {
+  margin: 5px;
 }
 
 .plans {
@@ -73,8 +84,23 @@ export default {
 }
 
 .card {
-  width: 60%;
+  width: 90%;
+  text-align: center;
   font-weight: bold;
   font-size: 1.2em;
+  border-radius: 10px;
+}
+
+.amount {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.button {
+  background-color: #EAA466;
+}
+
+button:active {
+  background-color: transparent;
 }
 </style>
