@@ -9,10 +9,12 @@
         </li>
         <li>
           <span v-if="planToggle === true" class="toggle" >
-            <i class="fal fa-toggle-on fa-lg" ></i>
+<!--            <i class="fal fa-toggle-on fa-lg" ></i>-->
+            ON
           </span>
           <span v-else class="toggle" >
-            <i class="fal fa-toggle-off fa-lg" ></i>
+<!--            <i class="fal fa-toggle-off fa-lg" ></i>-->
+            OFF
           </span>
         </li>
         <li>
@@ -88,7 +90,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'Pricing',
   data () {
