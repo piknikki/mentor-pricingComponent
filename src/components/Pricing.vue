@@ -21,18 +21,6 @@
           <span @click="planToggle=!planToggle">Annually</span>
         </li>
       </ul>
-
-<!--      <span class="plans icon" v-if="planToggle" @click="planToggle=!planToggle">-->
-<!--        <span class="monthly">Monthly</span>-->
-<!--        <i class="fal fa-toggle-off fa-lg false-monthly" ></i>-->
-<!--        <span class="annually">Annually</span>-->
-<!--      </span>-->
-<!--      <span class="plans icon" v-else @click="planToggle=!planToggle" >-->
-<!--        <span class="monthly">Monthly</span>-->
-<!--        <i class="fal fa-toggle-on fa-lg true-annual"></i>-->
-<!--        <span class="annually">Annually</span>-->
-<!--      </span>-->
-
     </div>
     <div class="cards-container columns">
       <div class="card column is-3 is-desktop">
