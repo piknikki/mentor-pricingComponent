@@ -2,15 +2,35 @@
   <div id="pricing">
     <h1>Our Pricing</h1>
     <br>
-    <div class="toggle-container">
-      <span>Monthly</span>
-      <span class="plans icon" v-if="planToggle" @click="planToggle=!planToggle">
-        <i class="fal fa-toggle-off fa-lg false-monthly" data-fa-transform="down-3" ></i>
-      </span>
-      <span class="plans icon" v-else @click="planToggle=!planToggle" >
-        <i class="fal fa-toggle-on fa-lg true-annual" data-fa-transform="down-3"></i>
-      </span>
-      <span>Annually</span>
+    <div class="toggle-container tabs is-centered is-medium">
+      <ul>
+        <li>
+          <span @click="planToggle=!planToggle">Monthly</span>
+        </li>
+        <li>
+          <span v-if="planToggle === true" class="toggle" >
+            <i class="fal fa-toggle-on fa-lg" ></i>
+          </span>
+          <span v-else class="toggle" >
+            <i class="fal fa-toggle-off fa-lg" ></i>
+          </span>
+        </li>
+        <li>
+          <span @click="planToggle=!planToggle">Annually</span>
+        </li>
+      </ul>
+
+<!--      <span class="plans icon" v-if="planToggle" @click="planToggle=!planToggle">-->
+<!--        <span class="monthly">Monthly</span>-->
+<!--        <i class="fal fa-toggle-off fa-lg false-monthly" ></i>-->
+<!--        <span class="annually">Annually</span>-->
+<!--      </span>-->
+<!--      <span class="plans icon" v-else @click="planToggle=!planToggle" >-->
+<!--        <span class="monthly">Monthly</span>-->
+<!--        <i class="fal fa-toggle-on fa-lg true-annual"></i>-->
+<!--        <span class="annually">Annually</span>-->
+<!--      </span>-->
+
     </div>
     <div class="cards-container columns">
       <div class="card column is-3 is-desktop">
@@ -68,6 +88,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Pricing',
   data () {
@@ -75,7 +96,7 @@ export default {
       planToggle: false
     }
   },
-  methods: {
+  watch: {
     changePlan () {
       this.planToggle = !this.planToggle
     }
@@ -108,8 +129,7 @@ h1 {
   padding: 30px;
 }
 
-.icon {
-  margin: 20px;
+.toggle {
   color: #8085E2;
 }
 
@@ -120,6 +140,10 @@ h1 {
   font-size: 1.2em;
   border-radius: 10px;
   margin: 10px auto;
+}
+
+li {
+  margin: 10px;
 }
 
 .middle-plan {
