@@ -3,24 +3,22 @@
     <h1>Our Pricing</h1>
     <br>
     <div class="toggle-container tabs is-centered is-medium">
-      <ul>
-        <li>
-          <span @click="planToggle=!planToggle">Monthly</span>
-        </li>
-        <li>
-          <span v-if="planToggle === true" class="toggle" >
-<!--            <i class="fal fa-toggle-on fa-lg" ></i>-->
-            ON
+      <div v-if="planToggle" class="is-centered">
+        <span class="on">Monthly</span>
+          <span class="toggle" @click="planToggle = !planToggle">
+            <font-awesome-icon :icon="['fal', 'toggle-off']" />
           </span>
-          <span v-else class="toggle" >
-<!--            <i class="fal fa-toggle-off fa-lg" ></i>-->
-            OFF
+        <span class="off">Annually</span>
+      </div>
+
+      <div v-else class="is-centered">
+        <span class="off">Monthly</span>
+          <span class="toggle" @click="planToggle = !planToggle">
+            <font-awesome-icon :icon="['fal', 'toggle-on']" />
           </span>
-        </li>
-        <li>
-          <span @click="planToggle=!planToggle">Annually</span>
-        </li>
-      </ul>
+        <span class="on">Annually</span>
+      </div>
+
     </div>
     <div class="cards-container columns">
       <div class="card column is-3 is-desktop">
@@ -119,7 +117,16 @@ h1 {
 }
 
 .toggle {
+  margin: 10px;
   color: #8085E2;
+}
+
+.on {
+  color: #8085E2;
+}
+
+.off {
+  color: darkgray;
 }
 
 .card {
